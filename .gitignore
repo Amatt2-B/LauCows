@@ -166,3 +166,5 @@ cython_debug/
 
 node_modules
 logs.txt
+# Temp files
+tmp/
