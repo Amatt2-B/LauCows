@@ -1,0 +1,6 @@
+
+CREATE TABLE cow (
+    id INTEGER PRIMARY KEY,
+    timestamp_column TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    cows INTEGER DEFAULT 0
+);
