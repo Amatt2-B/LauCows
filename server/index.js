@@ -23,12 +23,16 @@ app.get('/', (req, res) => res.send('Hello Lau!'));
 
 app.post('/saveEntry', async (req, res) => {
     const numberCows = req.body.numberCows;
+    const date = req.body.date || new Date().toLocaleString("sv-SE", {
+        timeZone: "America/Mexico_City",
+        hour12: false,
+    });
     try {
         const result = await turso.batch(
             [
               {
-                sql: "INSERT INTO cow(cows) VALUES (?)",
-                args: [numberCows],
+                sql: "INSERT INTO cow(cows, timestamp_column) VALUES (?, ?)",
+                args: [numberCows, date],
               },
             ],
             "write"
@@ -56,7 +60,7 @@ app.post('/saveEntry', async (req, res) => {
 
 app.get('/numberCows', async (req, res) => {
     try {
-        const result = await turso.execute("SELECT * FROM csfaow");
+        const result = await turso.execute("SELECT * FROM cow");
         res.status(200).send({status:'success', data: result.rows})
     } catch (error) {
         const dateTime = new Date().toLocaleTimeString('es-MX', {
