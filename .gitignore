@@ -166,5 +166,9 @@ cython_debug/
 
 node_modules
 logs.txt
+
 # Temp files
 tmp/
+
+# Models on notebook folder
+notebooks/*.pt
