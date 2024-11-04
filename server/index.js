@@ -82,10 +82,8 @@ app.get('/numberCows', async (req, res) => {
 });
 
 app.get('/cowsInRange', async (req, res) => {
-    console.log(req.query);
     const initialDate = req.query.initialDate;
     const endDate = req.query.endDate;
-    console.log(initialDate, endDate, "jsamga");
     try {
         const result = await turso.execute({
             sql : "SELECT * FROM cow WHERE timestamp_column <= ? AND timestamp_column >= ?",

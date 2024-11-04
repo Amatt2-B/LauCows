@@ -1,53 +1,37 @@
 import { CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
 import { CardCrowd } from './CardCrowd';
+import { useEffect, useState } from 'react';
 
-const data = [
-  {
-    "name": "Page A",
-    "uv": 4000,
-    "pv": 2400,
-    "amt": 2400
-  },
-  {
-    "name": "Page B",
-    "uv": 3000,
-    "pv": 1398,
-    "amt": 2210
-  },
-  {
-    "name": "Page C",
-    "uv": 2000,
-    "pv": 9800,
-    "amt": 2290
-  },
-  {
-    "name": "Page D",
-    "uv": 2780,
-    "pv": 3908,
-    "amt": 2000
-  },
-  {
-    "name": "Page E",
-    "uv": 1890,
-    "pv": 4800,
-    "amt": 2181
-  },
-  {
-    "name": "Page F",
-    "uv": 2390,
-    "pv": 3800,
-    "amt": 2500
-  },
-  {
-    "name": "Page G",
-    "uv": 3490,
-    "pv": 4300,
-    "amt": 2100
-  }
-]
-
+import api from './api/cows';
 
 const App = () => {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const actualDate = new Date().toLocaleString("sv-SE", {
+          timeZone: "America/Mexico_City",
+          hour12: false,
+      });
+      const today = new Date();
+      today.setDate(today.getDate() - 1);
+
+      const lastDay = today.toLocaleString("sv-SE", {
+          timeZone: "America/Mexico_City",
+          hour12: false,
+      });
+      const result = await api.getData(lastDay, actualDate);
+      // const result = await api.getData('2024-04-15 09:50:03', '2024-04-16 09:50:03')
+      if (result.status === 'success'){
+        const {status, ...dataApi} = result;
+        setData(dataApi);
+        console.log(dataApi);
+      } 
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <div className='w-screen h-screen flex flex-col bg-base-100'>
       {/* Title */}
@@ -62,37 +46,37 @@ const App = () => {
       <div className='flex flex-col items-center w-screen h-1/3 justify-center my-4'>
         <p className='text-lg text-center'>Numero de vacas detectadas en un transcurso de 24hrs</p>
         <ResponsiveContainer width='90%'>
-          <AreaChart data={data}>
+          <AreaChart data={data.cowsAlongTime || []}>
             <defs>
               <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
                 <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
               </linearGradient>
             </defs>
-            <XAxis dataKey="name" />
+            <XAxis dataKey="date" />
             <YAxis />
             <CartesianGrid strokeDasharray="3 3" />
             <Tooltip />
-            <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorPv)" />            
+            <Area type="monotone" dataKey="cows" stroke="#8884d8" fillOpacity={1} fill="url(#colorPv)" />            
           </AreaChart>
         </ResponsiveContainer>
       </div>
       <div className='h-fit px-4 flex items-center'>
-        <p className='text-primary text-lg'>Tiempo con deteccion sin vacas (min): </p>
-        <p className='text-primary font-bold text-xl ml-4'>0</p>
+        <p className='text-primary text-lg'>Tiempo sin deteccion de vacas (min): </p>
+        <p className='text-primary font-bold text-xl ml-4'> {data && data.deadTime !== undefined && data.deadTime} </p>
       </div>
       <div className='flex-1 flex flex-col px-4 py-2'>
         <p className='text-primary text-lg'>Horarios detectados con aglomeracion</p>
         <div className='flex flex-1 overflow-x-auto p-2 space-x-4'>
-          <CardCrowd />
-          <CardCrowd />
-          <CardCrowd />
-          <CardCrowd />
-          <CardCrowd />
-          <CardCrowd />
-          <CardCrowd />
-          <CardCrowd />
-          <CardCrowd />
+          {
+            data && data.agglomerationAlongTime !== undefined && data.agglomerationAlongTime.map((item, index) => (
+              <CardCrowd key={index} time={item.time} start={item.start} end={item.end} maxCow={item.maxCow} />
+            ))
+          }
+          {
+            data && data.agglomerationAlongTime !== undefined && data.agglomerationAlongTime.length === 0 &&
+            ( <p> Sin aglomeraciones detectadas </p> )
+          }
         </div>
       </div>
     </div>
