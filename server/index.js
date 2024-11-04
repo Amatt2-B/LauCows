@@ -81,6 +81,36 @@ app.get('/numberCows', async (req, res) => {
     }
 });
 
+app.get('/cowsInRange', async (req, res) => {
+    console.log(req.query);
+    const initialDate = req.query.initialDate;
+    const endDate = req.query.endDate;
+    console.log(initialDate, endDate, "jsamga");
+    try {
+        const result = await turso.execute({
+            sql : "SELECT * FROM cow WHERE timestamp_column <= ? AND timestamp_column >= ?",
+            args : [endDate, initialDate]
+        });
+        res.status(200).send({status:'success', data: result.rows})
+    } catch (error) {
+        const dateTime = new Date().toLocaleTimeString('es-MX', {
+            timeZone: 'America/Mexico_City',
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        });
+        const errorMessage = `[${dateTime}] Error: ${error.message}\n`;
+        writeFile('./logs.txt', errorMessage, { flag: 'a+' }, err => {
+            if (err) {
+                console.error('Failed to write to log file:', err);
+            } else {
+                console.error(`An error ocurred trying to read the data at ${dateTime}. See the complete log at /logs`);
+            }
+        });
+        res.status(500).send({status: 'failed', msg:'An error ocurred with data base'});
+    }
+});
+
 app.get('/logs', (req, res) => {
     readFile('./logs.txt', 'utf8', (err, data) => {
         if (err) {
