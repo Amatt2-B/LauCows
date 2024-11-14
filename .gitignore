@@ -172,3 +172,6 @@ tmp/
 
 # Models on notebook folder
 notebooks/*.pt
+
+# Sqlite database
+server/*.db
