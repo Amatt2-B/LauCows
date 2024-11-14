@@ -2,7 +2,7 @@
     "apps": [
         {
             "name": "CowDetection",
-            "script": "./detection/main.py",
+            "script": "./main.py",
             "cwd": "./detection/",
             "interpreter": "/usr/bin/python",
             "args": [""],
@@ -13,7 +13,7 @@
         },
         {
             "name": "WebServer",
-            "script": "./server/index.js",
+            "script": "./index.js",
             "cwd": "./server/",
             "args": [""],
             "instances": 1,

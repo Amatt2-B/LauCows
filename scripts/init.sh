@@ -106,7 +106,7 @@ echo "Installing server dependencies"
 cd ./server && npm install
 
 echo "Installing daemon manager"
-npm install pm2@latest -g
+sudo npm install pm2@latest -g
 
 echo "Launching the services"
 pm2 start ecosystem.config.json
