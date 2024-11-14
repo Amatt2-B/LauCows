@@ -1,0 +1,110 @@
+#!/bin/bash
+
+if ! command -v node &> /dev/null; then
+    read -p "Do you want to install Node.js (y/n): " installnode
+    if [[ "$installnode" == "y" ]]; then
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+        nvm install 18
+        nvm use 18
+    else
+        exit 1
+    fi
+fi
+
+createEnvs() {
+    echo "== WEB SERVER CONFIGURATION =="
+
+    read -p "Server port (default 3001): " serverport
+    serverport=${serverport:-3001}
+
+    read -p "Time between pictures (default 5): " timepics
+    timepics=${timepics:-5}
+
+    while [[ "$dbservice" != "local" && "$dbservice" != "turso" ]]; do
+        read -p "Choose the sqlite service (local or turso): " dbservice
+
+        if [[ "$dbservice" != "local" && "$dbservice" != "turso" ]]; then
+            echo "Invalid sqlite service. Please enter 'local' or 'turso'."
+        fi
+    done
+
+    if [[ "$dbservice" == 'turso' ]]; then
+        while [[ -z "$tursodburl" ]]; do
+            read -p "Enter the turso database url: " tursodburl
+            
+            if [[ -z "$tursodburl" ]]; then
+                echo "Turso database url is required!"
+            fi
+        done
+
+        while [[ -z "$tursoauthtoken" ]]; do
+            read -p "Enter the turso auth token: " tursoauthtoken
+            
+            if [[ -z "$tursoauthtoken" ]]; then
+                echo "Turso auth token is required!"
+            fi
+        done
+    fi
+
+    if [[ -f ./dashboard/.env ]]; then
+        read -p "./dashboard/.env file already exists. Do you want to overwrite it? (y/n): " overwriteDashboard
+        if [[ "$overwriteDashboard" == "y" ]]; then
+            cat <<EOF > ./dashboard/.env
+VITE_API_SERVER=http://127.0.0.1:$serverport
+VITE_TIME_PICTURE=$timepics
+EOF
+        fi
+    else
+        cat <<EOF > ./dashboard/.env
+VITE_API_SERVER=http://127.0.0.1:$serverport
+VITE_TIME_PICTURE=$timepics
+EOF
+
+    fi
+
+    if [[ -f ./server/.env ]]; then
+        read -p "./server/.env file already exists. Do you want to overwrite it? (y/n): " overwriteServer
+        if [[ "$overwriteServer" == "y" ]]; then
+            cat <<EOF > ./server/.env
+SERVER_PORT=$serverport
+DB_SERVICE=$dbservice
+EOF
+            if [[ "$dbservice" == 'turso' ]]; then
+                echo "TURSO_DATABASE_URL=$tursodburl" >> ./server/.env
+                echo "TURSO_AUTH_TOKEN=$tursoauthtoken" >> ./server/.env
+            fi
+        fi
+    else
+        cat <<EOF > ./server/.env
+SERVER_PORT=$serverport
+DB_SERVICE=$dbservice
+EOF
+        if [[ "$dbservice" == 'turso' ]]; then
+            echo "TURSO_DATABASE_URL=$tursodburl" >> ./server/.env
+            echo "TURSO_AUTH_TOKEN=$tursoauthtoken" >> ./server/.env
+        fi
+    fi
+
+    echo "Configuration files created successfully!!"
+}
+
+createEnvs
+
+# echo "Installing python dependencies"
+# pip install -r ./requirements.txt
+
+echo "Installing web app dependencies"
+cd ./dashboard && npm install 
+
+echo "Building web app for production"
+npm run build
+
+cd ..
+mv ./dashboard/dist ./server
+
+echo "Installing server dependencies"
+cd ./server && npm install
+
+# TODO: run the server and python scripts as daemons
+
+echo "Initialization successfull"
