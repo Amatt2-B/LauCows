@@ -90,8 +90,8 @@ EOF
 
 createEnvs
 
-# echo "Installing python dependencies"
-# pip install -r ./requirements.txt
+echo "Installing python dependencies"
+pip install -r ./requirements.txt
 
 echo "Installing web app dependencies"
 cd ./dashboard && npm install 
@@ -105,6 +105,10 @@ mv ./dashboard/dist ./server
 echo "Installing server dependencies"
 cd ./server && npm install
 
-# TODO: run the server and python scripts as daemons
+echo "Installing daemon manager"
+npm install pm2@latest -g
+
+echo "Launching the services"
+pm2 start ecosystem.config.json
 
 echo "Initialization successfull"

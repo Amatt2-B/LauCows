@@ -1,0 +1,25 @@
+{
+    "apps": [
+        {
+            "name": "CowDetection",
+            "script": "./detection/main.py",
+            "cwd": "./detection/",
+            "interpreter": "/usr/bin/python",
+            "args": [""],
+            "instances": 1,
+            "wait_ready": true,
+            "max_restarts": 5,
+            "autostart": true
+        },
+        {
+            "name": "WebServer",
+            "script": "./server/index.js",
+            "cwd": "./server/",
+            "args": [""],
+            "instances": 1,
+            "wait_ready": true,
+            "max_restarts": 5,
+            "autostart": true
+        }
+    ]
+}
