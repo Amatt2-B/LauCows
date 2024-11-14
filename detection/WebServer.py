@@ -3,12 +3,12 @@ import asyncio
 import websockets as ws
 import requests as req
 
-config = {
-    'param1': 1,
-    'param2': True,
-    'param3': 'hello',
-    'param4': ['did', 1, False],
-}
+# config = {
+#     'param1': 1,
+#     'param2': True,
+#     'param3': 'hello',
+#     'param4': ['did', 1, False],
+# }
 
 async def OnMessage(msg):
     print(f'message {msg}')
@@ -25,7 +25,7 @@ async def ConnectSocket():
         try: 
             async with ws.connect('ws://localhost:6969') as socket:
                 await OnOpen()
-                await socket.send(json.dumps(config))
+                # await socket.send(json.dumps(config))
                 
                 try:
                     while True:
@@ -53,4 +53,4 @@ def CreateNumCowsEntry(numCows, date):
         response.status_code
 
     except req.exceptions.ConnectionError:
-        print('lol')
+        print('Failed to connect to server')
