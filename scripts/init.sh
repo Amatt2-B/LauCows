@@ -117,4 +117,10 @@ sudo npm install pm2@latest -g
 echo "Launching the services"
 pm2 start ecosystem.config.json
 
+echo "Configuring pm2 to start at boot"
+pm2 startup systemd -u $USER --hp $HOME
+
+echo "Saving pm2 process list"
+pm2 save
+
 echo "Initialization successfull"
