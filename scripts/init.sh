@@ -1,17 +1,21 @@
 #!/bin/bash
 
 if ! command -v node &> /dev/null; then
-    read -p "Do you want to install Node.js (y/n): " installnode
-    if [[ "$installnode" == "y" ]]; then
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-        export NVM_DIR="$HOME/.nvm"
-        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-        nvm install 18
-        nvm use 18
-    else
-        exit 1
-    fi
+    while true; do
+        read -p "Do you want to install Node.js (y/n): " installnode
+        if [[ "$installnode" == "y" ]]; then
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+            nvm install 18
+            nvm use 18
+        elif [[ "$installnode" == "n" ]]; then
+            exit 1
+        else
+            echo "Only write y or n"
+        fi
+    done
 fi
 
 createEnvs() {
@@ -47,6 +51,14 @@ createEnvs() {
                 echo "Turso auth token is required!"
             fi
         done
+
+        while [[ -z "$tursorole" ]]; do
+            read -p "Enter the turso auth role: " tursorole
+            
+            if [[ -z "$tursorole" ]]; then
+                echo "Turso auth role is required!"
+            fi
+        done
     fi
 
     if [[ -f ./dashboard/.env ]]; then
@@ -75,6 +87,7 @@ EOF
             if [[ "$dbservice" == 'turso' ]]; then
                 echo "TURSO_DATABASE_URL=$tursodburl" >> ./server/.env
                 echo "TURSO_AUTH_TOKEN=$tursoauthtoken" >> ./server/.env
+                echo "TURSO_ROLE_ACCESS=$tursorole" >> ./server/.env
             fi
         fi
     else
@@ -85,6 +98,7 @@ EOF
         if [[ "$dbservice" == 'turso' ]]; then
             echo "TURSO_DATABASE_URL=$tursodburl" >> ./server/.env
             echo "TURSO_AUTH_TOKEN=$tursoauthtoken" >> ./server/.env
+            echo "TURSO_ROLE_ACCESS=$tursorole" >> ./server/.env
         fi
     fi
 
