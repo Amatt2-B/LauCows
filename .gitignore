@@ -175,3 +175,6 @@ notebooks/*.pt
 
 # Sqlite database
 server/*.db
+
+# Virtual env
+lauenv/

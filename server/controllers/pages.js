@@ -9,7 +9,7 @@ export default {
                 return res.send(html);
             } 
             
-            return next(ServerError(500, err.message, 'oops we couldn\'t load this page'));
+            return next(new ServerError(500, err.message, 'oops we couldn\'t load this page'));
         });
     }
 }
