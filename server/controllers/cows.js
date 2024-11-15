@@ -1,6 +1,21 @@
 import turso from '../database.js';
 import ServerError from '../utils/ServerError.js';
 
+import 'dotenv/config';
+const roleUser = process.env.TURSO_ROLE_ACCESS;
+
+const logAccess = async (msg) => {
+    turso.batch(
+        [
+            {
+                sql: "INSERT INTO log(msg) VALUES (?)",
+                args: [msg],
+            },
+        ],
+        "write"
+    )
+};
+
 export default {
     /** @type {import("express").RequestHandler} */
     saveEntry: (req, res, next) => {
@@ -19,7 +34,7 @@ export default {
             ],
             "write"
         ).then((result) => {
-            console.log(`Entry written on DataBase with value ${numberCows} and id: ${result[0].lastInsertRowid}`);
+            logAccess(`Entry written on DataBase with value ${numberCows} and id: ${result[0].lastInsertRowid} as [${roleUser}]`);
             res.status(200).send({
                 status:'success', 
                 msg:'Entry succesfull written', 
@@ -37,8 +52,8 @@ export default {
     numberCows: (req, res, next) => {
         turso.execute("SELECT * FROM cow")
             .then((result) => {
+                logAccess(`Table cow readed as [${roleUser}]`);
                 res.status(200).send({status:'success', data: result.rows});
-
             })
             .catch((error) => {
                 next(new ServerError(500, error.message, 'An error occurred while querying the database'));
@@ -56,8 +71,8 @@ export default {
             args : [endDate, initialDate]
 
         }).then((result) => {
+            logAccess(`Table cow readed as [${roleUser}]`);
             res.status(200).send({status:'success', data: result.rows})
-
         }).catch((error) => {
             next(new ServerError(500, error.message, 'An error occurred with your query'));
 
