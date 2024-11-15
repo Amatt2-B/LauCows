@@ -93,8 +93,11 @@ EOF
 
 createEnvs
 
+echo "Creating python virtual environment"
+python -m venv lauenv
+
 echo "Installing python dependencies"
-pip install -r ./requirements.txt
+lauenv/bin/pip install -r ./requirements.txt
 
 echo "Installing web app dependencies"
 cd ./dashboard && npm install 

@@ -4,7 +4,7 @@
             "name": "CowDetection",
             "script": "./main.py",
             "cwd": "./detection/",
-            "interpreter": "/usr/bin/python",
+            "interpreter": "./lauenv/bin/python",
             "args": [""],
             "instances": 1,
             "wait_ready": true,
