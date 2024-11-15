@@ -8,7 +8,7 @@ const api = {};
 const minValueAgglomeration = 2;
 
 api.getData = async (initialDate, endDate) => {
-    const endpoint = `${baseApiEndPoint}/cowsInRange`;
+    const endpoint = `http://${window.location.hostname}:${baseApiEndPoint}/cowsInRange`;
     const response = await axios.get(endpoint, {params: {initialDate, endDate}});
 
     const status = response.data.status;
@@ -47,7 +47,7 @@ api.getData = async (initialDate, endDate) => {
 };
 
 api.getHeatmap = async (initialDate, endDate) => {
-    const endpoint = `${baseApiEndPoint}/cowsInRange`;
+    const endpoint = `http://${window.location.hostname}:${baseApiEndPoint}/cowsInRange`;
     const response = await axios.get(endpoint, { params: { initialDate, endDate } });
     const status = response.data.status;
     const data = response.data.data;
