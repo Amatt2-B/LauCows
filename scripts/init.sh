@@ -107,6 +107,13 @@ EOF
 
 createEnvs
 
+if ! dpkg -s python3-venv >/dev/null 2>&1; then
+    echo "Installing python3-venv"
+    sudo apt-get install -y python3-venv
+else
+    echo "python3-venv already installed"
+fi
+
 echo "Creating python virtual environment"
 python -m venv lauenv
 
@@ -126,13 +133,14 @@ echo "Installing server dependencies"
 cd ./server && npm install
 
 echo "Installing daemon manager"
-npm install pm2@latest -g
+sudo npm install pm2@latest -g
 
 echo "Launching the services"
 pm2 start ecosystem.config.json
 
 echo "Configuring pm2 to start at boot"
 pm2 startup systemd -u $USER --hp $HOME
+sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u pi --hp /home/pi
 
 echo "Saving pm2 process list"
 pm2 save
