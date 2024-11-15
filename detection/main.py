@@ -40,9 +40,15 @@ async def CowPhoto():
     WebServer.CreateNumCowsEntry(numCows, strServerDateTime)
 
 
+async def Fast():
+    while True:
+        await CowPhoto()
+        await asyncio.sleep(5)
+
 async def main():
     tasks = [
-        asyncio.create_task(Cron.CreateTask(CowPhoto, PHOTO_CRON)),
+        # asyncio.create_task(Cron.CreateTask(CowPhoto, PHOTO_CRON)),
+        asyncio.create_task(Fast()),
         # asyncio.create_task(WebServer.ConnectSocket()),
     ]
     await asyncio.gather(*tasks)

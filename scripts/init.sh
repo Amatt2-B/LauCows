@@ -4,6 +4,9 @@ if ! command -v node &> /dev/null; then
     read -p "Do you want to install Node.js (y/n): " installnode
     if [[ "$installnode" == "y" ]]; then
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
         nvm install 18
         nvm use 18
     else
@@ -90,8 +93,11 @@ EOF
 
 createEnvs
 
-# echo "Installing python dependencies"
-# pip install -r ./requirements.txt
+echo "Creating python virtual environment"
+python -m venv lauenv
+
+echo "Installing python dependencies"
+lauenv/bin/pip install -r ./requirements.txt
 
 echo "Installing web app dependencies"
 cd ./dashboard && npm install 
@@ -105,6 +111,10 @@ mv ./dashboard/dist ./server
 echo "Installing server dependencies"
 cd ./server && npm install
 
-# TODO: run the server and python scripts as daemons
+echo "Installing daemon manager"
+sudo npm install pm2@latest -g
+
+echo "Launching the services"
+pm2 start ecosystem.config.json
 
 echo "Initialization successfull"
