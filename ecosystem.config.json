@@ -3,21 +3,21 @@
         {
             "name": "CowDetection",
             "script": "./main.py",
-            "cwd": "./detection/",
-            "interpreter": "./lauenv/bin/python",
-            "args": [""],
+            "cwd": "./detection",
+            "interpreter": "/home/pi/LauCows/lauenv/bin/python",
+            "args": [],
             "instances": 1,
-            "wait_ready": true,
+            "wait_ready": false,
             "max_restarts": 5,
             "autostart": true
         },
         {
             "name": "WebServer",
             "script": "./index.js",
-            "cwd": "./server/",
-            "args": [""],
+            "cwd": "./server",
+            "args": [],
             "instances": 1,
-            "wait_ready": true,
+            "wait_ready": false,
             "max_restarts": 5,
             "autostart": true
         }
