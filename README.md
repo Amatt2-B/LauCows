@@ -7,8 +7,7 @@
 ╚══════╝╚═╝░░╚═╝░╚═════╝░░╚════╝░░╚════╝░░░░╚═╝░░░╚═╝░░╚═════╝░
 <br><br>
 
-## <center>![CowBulklifeGIF](https://github.com/user-attachments/assets/33c7bdb2-0288-448f-85b6-5b21ab23f06b)
-</center>
+## <center>![CowBulklifeGIF](https://github.com/user-attachments/assets/33c7bdb2-0288-448f-85b6-5b21ab23f06b)</center>
 ---
 ## Overview
 This project focuses on improving dairy cow productivity and operational efficiency at a dairy farm using advanced technologies. By leveraging computer vision and artificial intelligence, the project aims to monitor cow behavior, optimize milking processes, and improve overall farm profitability.
