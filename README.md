@@ -1,7 +1,14 @@
-# LawCows ![CowLaserEyesGIF](https://github.com/user-attachments/assets/f3af72c6-478f-4708-b5df-cab1bbdbbba2)
+# 
+░░░██╗░██╗░  ██╗░░░░░░█████╗░░██╗░░░░░░░██╗░█████╗░░█████╗░░██╗░░░░░░░██╗░██████╗
+██████████╗  ██║░░░░░██╔══██╗░██║░░██╗░░██║██╔══██╗██╔══██╗░██║░░██╗░░██║██╔════╝
+╚═██╔═██╔═╝  ██║░░░░░███████║░╚██╗████╗██╔╝██║░░╚═╝██║░░██║░╚██╗████╗██╔╝╚█████╗░
+██████████╗  ██║░░░░░██╔══██║░░████╔═████║░██║░░██╗██║░░██║░░████╔═████║░░╚═══██╗
+╚██╔═██╔══╝  ███████╗██║░░██║░░╚██╔╝░╚██╔╝░╚█████╔╝╚█████╔╝░░╚██╔╝░╚██╔╝░██████╔╝
+░╚═╝░╚═╝░░░  ╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░╚════╝░░╚════╝░░░░╚═╝░░░╚═╝░░╚═════╝░
+<br><br>
+<center>![CowWigGIF](https://github.com/user-attachments/assets/0fd770b4-039f-49d1-887e-20f13a3313d9)</center>
 
 
-# Dairy Farm Optimization Project
 
 ## Overview
 This project focuses on improving dairy cow productivity and operational efficiency at a dairy farm using advanced technologies. By leveraging computer vision and artificial intelligence, the project aims to monitor cow behavior, optimize milking processes, and improve overall farm profitability.
