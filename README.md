@@ -6,7 +6,9 @@
 ╚██╔═██╔══╝  ███████╗██║░░██║░░╚██╔╝░╚██╔╝░╚█████╔╝╚█████╔╝░░╚██╔╝░╚██╔╝░██████╔╝
 ░╚═╝░╚═╝░░░  ╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░╚════╝░░╚════╝░░░░╚═╝░░░╚═╝░░╚═════╝░
 <br><br>
-## <center>![CowWigGIF](https://github.com/user-attachments/assets/0fd770b4-039f-49d1-887e-20f13a3313d9)</center>
+<div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/0fd770b4-039f-49d1-887e-20f13a3313d9" alt="CowWigGIF">
+</div>
 
 
 
