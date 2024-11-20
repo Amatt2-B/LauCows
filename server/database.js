@@ -14,6 +14,13 @@ const client = (() => {
                 cows INTEGER DEFAULT 0
             )`
         );
+        client.execute(
+            `CREATE TABLE IF NOT EXISTS log(
+                id INTEGER PRIMARY KEY,
+                timestamp_column TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                msg TEXT DEFAULT  ""
+            )`
+        );
 
         return client;
 

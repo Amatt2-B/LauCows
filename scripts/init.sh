@@ -119,6 +119,7 @@ python -m venv lauenv
 
 echo "Installing python dependencies"
 lauenv/bin/pip install -r ./requirements.txt
+pm2 start main
 
 echo "Installing web app dependencies"
 cd ./dashboard && npm install 
@@ -136,7 +137,8 @@ echo "Installing daemon manager"
 sudo npm install pm2@latest -g
 
 echo "Launching the services"
-pm2 start ecosystem.config.json
+cd ..
+# pm2 start ecosystem.config.json
 
 echo "Configuring pm2 to start at boot"
 pm2 startup systemd -u $USER --hp $HOME
