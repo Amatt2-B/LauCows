@@ -68,20 +68,6 @@ This project focuses on improving dairy cow productivity and operational efficie
 
 ---
 
-## Deployment
-
-### Implementation Plan:
-- **Hardware**:
-  - Raspberry Pi 3 for real-time detection.
-  - Gaming laptops with GPUs (NVIDIA GTX960M, GeForce RTX) for training.
-- **Software**:
-  - **TensorFlow** and **PyTorch** for model development.
-  - **Roboflow**, **Labelme**, and **LabelGPT** for data labeling.
-- **Cloud Storage**:
-  - Google Drive for storing datasets and project files.
-
----
-
 ## Evaluation
 
 ### Metrics:
