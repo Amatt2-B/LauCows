@@ -7,11 +7,23 @@ import WebServer
 import Cron
 import CowDetection
 import Camera
+import numpy as np
+import os
 
-PHOTO_CRON = '*/5 * * * *' # Every 5 minutes
+test = True
+PHOTO_CRON = '*/5 * * * * ' # Every 5 minutes
+directory = "C:\Users\Peblo\Downloads\images"
+
+print("hola")
+
+if test:
+    filePaths = [os.path.join(directory, file) for file in os.listdir(directory) if os.path.isfile(os.path.join(directory, file))]
 
 async def CowPhoto():
-    image = Camera.TakePhoto()
+    if not test:
+        image = Camera.TakePhoto()
+    else:
+        image = cv2.imread(filePaths[np.random.randint(0, len(filePaths))])
 
     if image is None:
         return
@@ -35,7 +47,7 @@ async def CowPhoto():
 
     boxes = CowDetection.PredBoxes(image)
     numCows = boxes.shape[0]
-    # print(f'{numCows} cows detected')
+    print(f'{numCows} cows detected')
 
     WebServer.CreateNumCowsEntry(numCows, strServerDateTime)
 

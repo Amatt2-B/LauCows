@@ -10,10 +10,6 @@ import { COLORS, THRESHOLDS } from "./constants";
 export const Heatmap = ({ width, height, data = [] }) => {
   const [hoveredCell, setHoveredCell] = useState(null);
 
-  useEffect(() => {
-    console.log(hoveredCell);
-  }, [hoveredCell]);
-
   // Color scale is computed here bc it must be passed to both the renderer and the legend
   const values = data
     .map((d) => d.value)

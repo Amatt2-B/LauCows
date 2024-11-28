@@ -15,7 +15,7 @@ const App = () => {
   const [selectedDateStart, setSelectedDateStart] = useState('');
   const [selectedDateEnd, setSelectedDateEnd] = useState('');
   const [selectedContent, setSelectedContent] = useState(content1)
-
+  const [autoUpdate, setAutoUpdate] = useState(false);
 
   useEffect(() => {
     const actualDate = new Date().toLocaleString("sv-SE", {
@@ -28,16 +28,15 @@ const App = () => {
     setSelectedDateEnd(formatedDate);
   }, []);
 
+  const fetchData = async () => {
+    const result = await api.getData(`${selectedDate} 00:00:00`, `${selectedDate} 23:59:59`)
+    if (result.status === 'success'){
+      // eslint-disable-next-line no-unused-vars
+      const {status, ...dataApi} = result;
+      setData(dataApi);
+    } 
+  };
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await api.getData(`${selectedDate} 00:00:00`, `${selectedDate} 23:59:59`)
-      if (result.status === 'success'){
-        // eslint-disable-next-line no-unused-vars
-        const {status, ...dataApi} = result;
-        setData(dataApi);
-      } 
-    };
-
     fetchData();
   }, [selectedDate]);
 
@@ -53,6 +52,19 @@ const App = () => {
     };
     fetchData();
   }, [selectedDateStart, selectedDateEnd]);
+
+  useEffect(() => {
+    let intervalId;
+    if (autoUpdate) {
+      intervalId = setInterval(() => {
+        fetchData();
+      }, 5000)
+    }
+
+    return () => {
+      clearInterval(intervalId);
+    }
+  }, [autoUpdate])
  
   const CowIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 640 512">
@@ -84,6 +96,8 @@ const App = () => {
             <div className='flex items-center' >
               <p className='text-lg text-center mr-2'>Número de vacas detectadas el dia </p>
               <input type="date" className='rounded-md p-2 hover:cursor-pointer' value={selectedDate} onChange={(e) => setSelectedDate(e.target.value) } />
+              <p className='mx-4' >Auto-update</p>
+              <input type="checkbox" className="toggle toggle-sm" onInput={() => setAutoUpdate((actual) => !actual) } />
             </div>
             { data.cowsAlongTime && data.cowsAlongTime.length > 0 ?
               (
