@@ -1,0 +1,518 @@
+[
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "MediaFileUpload",
+        "importPath": "googleapiclient.http",
+        "description": "googleapiclient.http",
+        "isExtraImport": true,
+        "detail": "googleapiclient.http",
+        "documentation": {}
+    },
+    {
+        "label": "Create_Service",
+        "importPath": "Google",
+        "description": "Google",
+        "isExtraImport": true,
+        "detail": "Google",
+        "documentation": {}
+    },
+    {
+        "label": "YOLO",
+        "importPath": "ultralytics",
+        "description": "ultralytics",
+        "isExtraImport": true,
+        "detail": "ultralytics",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "croniter",
+        "importPath": "croniter",
+        "description": "croniter",
+        "isExtraImport": true,
+        "detail": "croniter",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "WebServer",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "WebServer",
+        "description": "WebServer",
+        "detail": "WebServer",
+        "documentation": {}
+    },
+    {
+        "label": "Cron",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "Cron",
+        "description": "Cron",
+        "detail": "Cron",
+        "documentation": {}
+    },
+    {
+        "label": "CowDetection",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "CowDetection",
+        "description": "CowDetection",
+        "detail": "CowDetection",
+        "documentation": {}
+    },
+    {
+        "label": "Camera",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "Camera",
+        "description": "Camera",
+        "detail": "Camera",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "websockets",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "websockets",
+        "description": "websockets",
+        "detail": "websockets",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "fasterrcnn_resnet50_fpn",
+        "importPath": "torchvision.models.detection",
+        "description": "torchvision.models.detection",
+        "isExtraImport": true,
+        "detail": "torchvision.models.detection",
+        "documentation": {}
+    },
+    {
+        "label": "fasterrcnn_resnet50_fpn",
+        "importPath": "torchvision.models.detection",
+        "description": "torchvision.models.detection",
+        "isExtraImport": true,
+        "detail": "torchvision.models.detection",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "Subset",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision.transforms",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision.transforms",
+        "description": "torchvision.transforms",
+        "detail": "torchvision.transforms",
+        "documentation": {}
+    },
+    {
+        "label": "functional",
+        "importPath": "torchvision.transforms",
+        "description": "torchvision.transforms",
+        "isExtraImport": true,
+        "detail": "torchvision.transforms",
+        "documentation": {}
+    },
+    {
+        "label": "functional",
+        "importPath": "torchvision.transforms",
+        "description": "torchvision.transforms",
+        "isExtraImport": true,
+        "detail": "torchvision.transforms",
+        "documentation": {}
+    },
+    {
+        "label": "COCO",
+        "importPath": "pycocotools.coco",
+        "description": "pycocotools.coco",
+        "isExtraImport": true,
+        "detail": "pycocotools.coco",
+        "documentation": {}
+    },
+    {
+        "label": "COCOeval",
+        "importPath": "pycocotools.cocoeval",
+        "description": "pycocotools.cocoeval",
+        "isExtraImport": true,
+        "detail": "pycocotools.cocoeval",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.patches",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.patches",
+        "description": "matplotlib.patches",
+        "detail": "matplotlib.patches",
+        "documentation": {}
+    },
+    {
+        "label": "TakePhoto",
+        "kind": 2,
+        "importPath": "detection.Camera",
+        "description": "detection.Camera",
+        "peekOfCode": "def TakePhoto():\n    cam = cv2.VideoCapture(0)\n    cam.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)\n    cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)\n    cam.set(cv2.CAP_PROP_AUTO_EXPOSURE, -1)\n    if not cam.isOpened():\n        print('cannot open camera')\n        return None\n    ret, image = cam.read()\n    cam.release()",
+        "detail": "detection.Camera",
+        "documentation": {}
+    },
+    {
+        "label": "AvgBrightness",
+        "kind": 2,
+        "importPath": "detection.CowDetection",
+        "description": "detection.CowDetection",
+        "peekOfCode": "def AvgBrightness(image):\n    hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)\n    sumBrightess = np.sum(hsv[:,:,2])\n    w = image.shape[0]\n    h = image.shape[1]\n    area = w*h\n    return sumBrightess / area\ndef PredBoxes(image):\n    if AvgBrightness(image) < 40:\n        model = YOLO('../models/bestNight.pt')",
+        "detail": "detection.CowDetection",
+        "documentation": {}
+    },
+    {
+        "label": "PredBoxes",
+        "kind": 2,
+        "importPath": "detection.CowDetection",
+        "description": "detection.CowDetection",
+        "peekOfCode": "def PredBoxes(image):\n    if AvgBrightness(image) < 40:\n        model = YOLO('../models/bestNight.pt')\n    else:\n        model = YOLO('../models/bestDay.pt')\n    preds = model(image, conf=0.6)\n    # (1, nBoxes)\n    # classes = preds[0].boxes.cls\n    # (1, nBoxes)\n    # conf = preds[0].boxes.conf",
+        "detail": "detection.CowDetection",
+        "documentation": {}
+    },
+    {
+        "label": "PHOTO_CRON",
+        "kind": 5,
+        "importPath": "detection.main",
+        "description": "detection.main",
+        "peekOfCode": "PHOTO_CRON = '*/5 * * * *' # Every 5 minutes\nasync def CowPhoto():\n    image = Camera.TakePhoto()\n    if image is None:\n        return\n    now = datetime.now()\n    currentDatetime = now.strftime('%Y-%m-%d-%H-%M-%S')\n    serverDateTime = now.strftime('%Y-%m-%d %H:%M:%S')\n    # print('current date & time: ', currentDatetime)\n    strCurrDateTime = str(currentDatetime)",
+        "detail": "detection.main",
+        "documentation": {}
+    },
+    {
+        "label": "count",
+        "kind": 5,
+        "importPath": "detection.main",
+        "description": "detection.main",
+        "peekOfCode": "count = 0\ncountLock = asyncio.Lock()\nasync def Increment():\n    global count\n    # Lock the resource and modify it\n    async with countLock: \n        count += 1",
+        "detail": "detection.main",
+        "documentation": {}
+    },
+    {
+        "label": "countLock",
+        "kind": 5,
+        "importPath": "detection.main",
+        "description": "detection.main",
+        "peekOfCode": "countLock = asyncio.Lock()\nasync def Increment():\n    global count\n    # Lock the resource and modify it\n    async with countLock: \n        count += 1",
+        "detail": "detection.main",
+        "documentation": {}
+    },
+    {
+        "label": "CreateNumCowsEntry",
+        "kind": 2,
+        "importPath": "detection.WebServer",
+        "description": "detection.WebServer",
+        "peekOfCode": "def CreateNumCowsEntry(numCows, date):\n    try:\n        body = {\n            'numberCows': numCows,\n            'date': date,\n        }\n        response = req.post('http://127.0.0.1:3001/saveEntry', json=body);\n        response.status_code\n    except req.exceptions.ConnectionError:\n        print('Failed to connect to server')",
+        "detail": "detection.WebServer",
+        "documentation": {}
+    },
+    {
+        "label": "CocoDataset",
+        "kind": 6,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "class CocoDataset(torch.utils.data.Dataset):\n    def __init__(self, img_dir, ann_file, transforms=None):\n        self.img_dir = img_dir\n        self.coco = COCO(ann_file)\n        self.img_ids = list(self.coco.imgs.keys())\n        self.transforms = transforms or T.Compose([T.ToTensor()])\n    def __len__(self):\n        return len(self.img_ids)\n    def __getitem__(self, idx):\n        img_id = self.img_ids[idx]",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "split_dataset",
+        "kind": 2,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "def split_dataset(dataset, split_ratio=0.8):\n    total_size = len(dataset)\n    indices = list(range(total_size))\n    random.shuffle(indices)\n    train_size = int(split_ratio * total_size)\n    train_indices = indices[:train_size]\n    val_indices = indices[train_size:]\n    train_set = Subset(dataset, train_indices)\n    val_set = Subset(dataset, val_indices)\n    return train_set, val_set",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "create_model",
+        "kind": 2,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "def create_model(num_classes):\n    model = fasterrcnn_resnet50_fpn(weights=\"DEFAULT\", box_score_thresh=0.5)\n    in_features = model.roi_heads.box_predictor.cls_score.in_features\n    model.roi_heads.box_predictor = torchvision.models.detection.faster_rcnn.FastRCNNPredictor(in_features, num_classes)\n    return model\n# Entrenar el modelo\ndef train_model(model, dataloader, optimizer, device, epochs):\n    model.train()\n    losses_per_epoch = []\n    for epoch in range(epochs):",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "train_model",
+        "kind": 2,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "def train_model(model, dataloader, optimizer, device, epochs):\n    model.train()\n    losses_per_epoch = []\n    for epoch in range(epochs):\n        print(f\"Epoch {epoch + 1}/{epochs}\")\n        epoch_loss = 0\n        progress_bar = tqdm(dataloader, desc=f\"Epoch {epoch + 1}/{epochs}\", unit=\"batch\")\n        for images, targets in progress_bar:\n            images = [img.to(device) for img in images]\n            targets = [{k: v.to(device) for k, v in t.items()} for t in targets]",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_model",
+        "kind": 2,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "def evaluate_model(model, dataloader, coco, device):\n    model.eval()\n    coco_results = []\n    with torch.no_grad():\n        for images, targets in tqdm(dataloader, desc=\"Evaluating\"):\n            images = [img.to(device) for img in images]\n            outputs = model(images)\n            for target, output in zip(targets, outputs):\n                boxes = output['boxes'].cpu().numpy()\n                scores = output['scores'].cpu().numpy()",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "def main():\n    # Configuración\n    device = torch.device(\"cuda\") if torch.cuda.is_available() else torch.device(\"cpu\")\n    dataset = CocoDataset(IMG_DIR, ANN_FILE)\n    train_set, val_set = split_dataset(dataset, split_ratio=0.8)\n    train_loader = DataLoader(train_set, batch_size=4, shuffle=True, collate_fn=lambda x: tuple(zip(*x)))\n    val_loader = DataLoader(val_set, batch_size=4, shuffle=False, collate_fn=lambda x: tuple(zip(*x)))\n    model = create_model(num_classes=2)\n    model.to(device)\n    optimizer = torch.optim.SGD(model.parameters(), lr=0.005, momentum=0.9, weight_decay=0.0005)",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "IMG_DIR",
+        "kind": 5,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "IMG_DIR = r\"G:\\Shared drives\\CNN_COW_CAETEC\\DATASET\\YoloCowsV2\\images\"\nANN_FILE = r\"G:\\Shared drives\\CNN_COW_CAETEC\\DATASET\\YoloCowsV2\\labels_coco\\annotations.json\"\nOUTPUT_DIR = r\"C:\\Users\\adria\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\7mo Sem\\LauCows\\LauCows\\models\\rcnn\"\n# Dataset personalizado COCO\nclass CocoDataset(torch.utils.data.Dataset):\n    def __init__(self, img_dir, ann_file, transforms=None):\n        self.img_dir = img_dir\n        self.coco = COCO(ann_file)\n        self.img_ids = list(self.coco.imgs.keys())\n        self.transforms = transforms or T.Compose([T.ToTensor()])",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "ANN_FILE",
+        "kind": 5,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "ANN_FILE = r\"G:\\Shared drives\\CNN_COW_CAETEC\\DATASET\\YoloCowsV2\\labels_coco\\annotations.json\"\nOUTPUT_DIR = r\"C:\\Users\\adria\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\7mo Sem\\LauCows\\LauCows\\models\\rcnn\"\n# Dataset personalizado COCO\nclass CocoDataset(torch.utils.data.Dataset):\n    def __init__(self, img_dir, ann_file, transforms=None):\n        self.img_dir = img_dir\n        self.coco = COCO(ann_file)\n        self.img_ids = list(self.coco.imgs.keys())\n        self.transforms = transforms or T.Compose([T.ToTensor()])\n    def __len__(self):",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_DIR",
+        "kind": 5,
+        "importPath": "notebooks.rcnn",
+        "description": "notebooks.rcnn",
+        "peekOfCode": "OUTPUT_DIR = r\"C:\\Users\\adria\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\7mo Sem\\LauCows\\LauCows\\models\\rcnn\"\n# Dataset personalizado COCO\nclass CocoDataset(torch.utils.data.Dataset):\n    def __init__(self, img_dir, ann_file, transforms=None):\n        self.img_dir = img_dir\n        self.coco = COCO(ann_file)\n        self.img_ids = list(self.coco.imgs.keys())\n        self.transforms = transforms or T.Compose([T.ToTensor()])\n    def __len__(self):\n        return len(self.img_ids)",
+        "detail": "notebooks.rcnn",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_PATH",
+        "kind": 5,
+        "importPath": "notebooks.saveRcnn",
+        "description": "notebooks.saveRcnn",
+        "peekOfCode": "MODEL_PATH = r\"C:\\Users\\adria\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\7mo Sem\\LauCows\\LauCows\\models\\trained_fasterrcnn_resnet50.pth\"\n# Crear el modelo original\nfrom torchvision.models.detection import fasterrcnn_resnet50_fpn\nmodel = fasterrcnn_resnet50_fpn(num_classes=2)\nmodel.load_state_dict(torch.load(MODEL_PATH))\n# Guardar únicamente los pesos\nESSENTIAL_WEIGHTS_PATH = r\"C:\\Users\\adria\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\7mo Sem\\LauCows\\LauCows\\models\\essential_weights_fasterrcnn.pth\"\ntorch.save(model.state_dict(), ESSENTIAL_WEIGHTS_PATH)\n# Verificar tamaño\nimport os",
+        "detail": "notebooks.saveRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "notebooks.saveRcnn",
+        "description": "notebooks.saveRcnn",
+        "peekOfCode": "model = fasterrcnn_resnet50_fpn(num_classes=2)\nmodel.load_state_dict(torch.load(MODEL_PATH))\n# Guardar únicamente los pesos\nESSENTIAL_WEIGHTS_PATH = r\"C:\\Users\\adria\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\7mo Sem\\LauCows\\LauCows\\models\\essential_weights_fasterrcnn.pth\"\ntorch.save(model.state_dict(), ESSENTIAL_WEIGHTS_PATH)\n# Verificar tamaño\nimport os\nprint(f\"Tamaño de los pesos: {os.path.getsize(ESSENTIAL_WEIGHTS_PATH) / (1024 ** 2):.2f} MB\")",
+        "detail": "notebooks.saveRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "ESSENTIAL_WEIGHTS_PATH",
+        "kind": 5,
+        "importPath": "notebooks.saveRcnn",
+        "description": "notebooks.saveRcnn",
+        "peekOfCode": "ESSENTIAL_WEIGHTS_PATH = r\"C:\\Users\\adria\\OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey\\7mo Sem\\LauCows\\LauCows\\models\\essential_weights_fasterrcnn.pth\"\ntorch.save(model.state_dict(), ESSENTIAL_WEIGHTS_PATH)\n# Verificar tamaño\nimport os\nprint(f\"Tamaño de los pesos: {os.path.getsize(ESSENTIAL_WEIGHTS_PATH) / (1024 ** 2):.2f} MB\")",
+        "detail": "notebooks.saveRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "create_model",
+        "kind": 2,
+        "importPath": "notebooks.testRcnn",
+        "description": "notebooks.testRcnn",
+        "peekOfCode": "def create_model(num_classes):\n    model = torchvision.models.detection.fasterrcnn_resnet50_fpn(weights=\"DEFAULT\")\n    in_features = model.roi_heads.box_predictor.cls_score.in_features\n    model.roi_heads.box_predictor = torchvision.models.detection.faster_rcnn.FastRCNNPredictor(in_features, num_classes)\n    return model\n# Cargar el modelo entrenado\nmodel = create_model(num_classes=2)  # 1 clase (vacas) + fondo\nmodel.load_state_dict(torch.load(MODEL_PATH, map_location=device))\nmodel.to(device)\nmodel.eval()",
+        "detail": "notebooks.testRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "display_predictions",
+        "kind": 2,
+        "importPath": "notebooks.testRcnn",
+        "description": "notebooks.testRcnn",
+        "peekOfCode": "def display_predictions(image, predictions):\n    fig, ax = plt.subplots(1, figsize=(12, 8))\n    ax.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))\n    for box, score in zip(predictions[\"boxes\"], predictions[\"scores\"]):\n        box = box.cpu().numpy()  \n        if score >= 0.5:  # Umbral de confianza (ajústalo si es necesario)\n            x_min, y_min, x_max, y_max = box\n            rect = patches.Rectangle((x_min, y_min), x_max - x_min, y_max - y_min, linewidth=2, edgecolor=\"r\", facecolor=\"none\")\n            ax.add_patch(rect)\n            ax.text(x_min, y_min - 10, f\"{score:.2f}\", color=\"red\", fontsize=12, bbox=dict(facecolor=\"yellow\", alpha=0.5))",
+        "detail": "notebooks.testRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_PATH",
+        "kind": 5,
+        "importPath": "notebooks.testRcnn",
+        "description": "notebooks.testRcnn",
+        "peekOfCode": "MODEL_PATH = \"trained_fasterrcnn_resnet50.pth\"  # Cambia por el nombre de tu archivo .pth\nTEST_IMAGE_DIR = r\"G:\\Shared drives\\CNN_COW_CAETEC\\DATASET\\YoloCowsDay\\valid\\images\"\n# Configuración del dispositivo\ndevice = torch.device(\"cuda\") if torch.cuda.is_available() else torch.device(\"cpu\")\n# Crear el modelo Faster R-CNN con ResNet-50\ndef create_model(num_classes):\n    model = torchvision.models.detection.fasterrcnn_resnet50_fpn(weights=\"DEFAULT\")\n    in_features = model.roi_heads.box_predictor.cls_score.in_features\n    model.roi_heads.box_predictor = torchvision.models.detection.faster_rcnn.FastRCNNPredictor(in_features, num_classes)\n    return model",
+        "detail": "notebooks.testRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "TEST_IMAGE_DIR",
+        "kind": 5,
+        "importPath": "notebooks.testRcnn",
+        "description": "notebooks.testRcnn",
+        "peekOfCode": "TEST_IMAGE_DIR = r\"G:\\Shared drives\\CNN_COW_CAETEC\\DATASET\\YoloCowsDay\\valid\\images\"\n# Configuración del dispositivo\ndevice = torch.device(\"cuda\") if torch.cuda.is_available() else torch.device(\"cpu\")\n# Crear el modelo Faster R-CNN con ResNet-50\ndef create_model(num_classes):\n    model = torchvision.models.detection.fasterrcnn_resnet50_fpn(weights=\"DEFAULT\")\n    in_features = model.roi_heads.box_predictor.cls_score.in_features\n    model.roi_heads.box_predictor = torchvision.models.detection.faster_rcnn.FastRCNNPredictor(in_features, num_classes)\n    return model\n# Cargar el modelo entrenado",
+        "detail": "notebooks.testRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "notebooks.testRcnn",
+        "description": "notebooks.testRcnn",
+        "peekOfCode": "device = torch.device(\"cuda\") if torch.cuda.is_available() else torch.device(\"cpu\")\n# Crear el modelo Faster R-CNN con ResNet-50\ndef create_model(num_classes):\n    model = torchvision.models.detection.fasterrcnn_resnet50_fpn(weights=\"DEFAULT\")\n    in_features = model.roi_heads.box_predictor.cls_score.in_features\n    model.roi_heads.box_predictor = torchvision.models.detection.faster_rcnn.FastRCNNPredictor(in_features, num_classes)\n    return model\n# Cargar el modelo entrenado\nmodel = create_model(num_classes=2)  # 1 clase (vacas) + fondo\nmodel.load_state_dict(torch.load(MODEL_PATH, map_location=device))",
+        "detail": "notebooks.testRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "notebooks.testRcnn",
+        "description": "notebooks.testRcnn",
+        "peekOfCode": "model = create_model(num_classes=2)  # 1 clase (vacas) + fondo\nmodel.load_state_dict(torch.load(MODEL_PATH, map_location=device))\nmodel.to(device)\nmodel.eval()\n# Función para mostrar las predicciones\ndef display_predictions(image, predictions):\n    fig, ax = plt.subplots(1, figsize=(12, 8))\n    ax.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))\n    for box, score in zip(predictions[\"boxes\"], predictions[\"scores\"]):\n        box = box.cpu().numpy()  ",
+        "detail": "notebooks.testRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "test_images",
+        "kind": 5,
+        "importPath": "notebooks.testRcnn",
+        "description": "notebooks.testRcnn",
+        "peekOfCode": "test_images = [os.path.join(TEST_IMAGE_DIR, f) for f in os.listdir(TEST_IMAGE_DIR) if f.endswith(('.png', '.jpg', '.jpeg'))]\nif not test_images:\n    raise FileNotFoundError(f\"No se encontraron imágenes en el directorio {TEST_IMAGE_DIR}.\")\n# Seleccionar 10 imágenes aleatorias\nrandom_images = random.sample(test_images, min(10, len(test_images)))\n# Procesar cada imagen seleccionada\nfor img_path in random_images:\n    print(f\"Procesando: {img_path}\")\n    img = cv2.imread(img_path)\n    if img is None:",
+        "detail": "notebooks.testRcnn",
+        "documentation": {}
+    },
+    {
+        "label": "random_images",
+        "kind": 5,
+        "importPath": "notebooks.testRcnn",
+        "description": "notebooks.testRcnn",
+        "peekOfCode": "random_images = random.sample(test_images, min(10, len(test_images)))\n# Procesar cada imagen seleccionada\nfor img_path in random_images:\n    print(f\"Procesando: {img_path}\")\n    img = cv2.imread(img_path)\n    if img is None:\n        print(f\"No se pudo cargar la imagen: {img_path}\")\n        continue\n    # Preprocesar la imagen\n    img_tensor = F.to_tensor(cv2.cvtColor(img, cv2.COLOR_BGR2RGB)).unsqueeze(0).to(device)",
+        "detail": "notebooks.testRcnn",
+        "documentation": {}
+    }
+]
